@@ -67,6 +67,7 @@ dependencies {
     implementation "androidx.lifecycle:lifecycle-extensions:2.2.0"
     implementation "androidx.lifecycle:lifecycle-reactivestreams:2.2.0"
     implementation 'com.google.firebase:firebase-analytics:17.2.2'
+    implementation 'com.google.firebase:firebase-crashlytics:17.4.1'
     kapt "androidx.lifecycle:lifecycle-compiler:2.2.0"
     implementation "androidx.activity:activity-ktx:1.1.0"
 
@@ -89,9 +90,6 @@ dependencies {
     implementation platform('com.google.firebase:firebase-bom:26.8.0')
     implementation 'com.google.firebase:firebase-analytics-ktx'
     implementation 'com.google.firebase:firebase-crashlytics-ktx'
-
-    // RetrofitExt
-    // implementation 'com.github.nminin:RetrofitExt:0.1.2'
 
     // google
     implementation 'com.google.android.gms:play-services-location:17.1.0'
