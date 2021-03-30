@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Finally Project</string>
+
+    <!--WelcomeFragment-->
+    <string name="welcome_register">REGISTER</string>
+    <string name="welcome_log_in">LOG IN</string>
+    <!--/WelcomeFragment-->
 </resources>
