@@ -2,19 +2,35 @@ package com.example.nikolaiturev.finallyproject.presentation.base
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import androidx.navigation.NavController
+import androidx.navigation.NavDirections
 import com.google.android.material.snackbar.Snackbar
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.disposables.Disposable
 
 abstract class BaseViewModel : ViewModel() {
 
-    private val disposable = CompositeDisposable()
+    lateinit var navController: NavController
+
+    protected val disposable = CompositeDisposable()
 
     val message: MutableLiveData<BaseMessage> = SingleLiveEvent()
     val isInProgress = MutableLiveData<Boolean>()
 
     fun disposable(call: () -> Disposable) {
         disposable.add(call.invoke())
+    }
+
+    protected fun navigateTo(destinationId: Int){
+        navController.navigate(destinationId)
+    }
+
+    protected fun navigateTo(destination: NavDirections){
+        navController.navigate(destination)
+    }
+
+    protected fun navigateBack(){
+        navController.navigateUp()
     }
 
     fun postMessage(message: String?, type: Int = BaseMessage.Type.SHORT) {

@@ -36,11 +36,10 @@
         android:background="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent">
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/button_log_in"
+            android:id="@+id/button_welcome_login"
             style="@style/AppTheme.ButtonWhite"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -49,13 +48,12 @@
             android:layout_marginBottom="20dp"
             android:text="@string/welcome_log_in"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/button_register"
-            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintEnd_toStartOf="@+id/button_welcome_register"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/button_register"
+            android:id="@+id/button_welcome_register"
             style="@style/AppTheme.ButtonBlack"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -66,8 +64,7 @@
             android:text="@string/welcome_register"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/button_log_in"
+            app:layout_constraintStart_toEndOf="@+id/button_welcome_login"
             app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
