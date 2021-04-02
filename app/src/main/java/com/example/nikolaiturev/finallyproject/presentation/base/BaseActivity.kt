@@ -33,7 +33,9 @@ abstract class BaseActivity : AppCompatActivity() {
 
     private fun progressDialog() {
         progressDialog = Dialog(this)
+        // TODO почему переменная названа inflate? что  возвращает метод inflate у LayoutInflater?
         val inflate = LayoutInflater.from(this).inflate(R.layout.layout_progress, null)
+        // TODO setContentView в качетве параметра принимает Layout ID, почему мы не можем его туда передать?
         progressDialog.setContentView(inflate)
         progressDialog.setCancelable(false)
         progressDialog.window?.setBackgroundDrawable(

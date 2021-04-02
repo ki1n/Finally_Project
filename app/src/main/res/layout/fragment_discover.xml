@@ -4,6 +4,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <!-- TODO:
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+        точно нужно?
+     -->
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragment_discover"
         android:name="androidx.navigation.fragment.NavHostFragment"

@@ -1,21 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <!-- TODO snake case -->
     <item
         android:id="@+id/homeFragment"
         android:icon="@drawable/ic_image_navigation_bar_home"
         android:title="@string/bottom_home" />
+
+    <!-- TODO snake case -->
     <item
         android:id="@+id/searchFragment"
         android:icon="@drawable/ic_image_navigation_bar_search"
         android:title="@string/bottom_search" />
+
+    <!-- TODO snake case -->
     <item
         android:icon="@drawable/ic_image_navigation_bar_add"
         android:title="@string/bottom_add" />
+
+    <!-- TODO snake case -->
     <item
         android:id="@+id/chatFragment"
         android:icon="@drawable/ic_image_navigation_bar_chat"
         android:title="@string/bottom_chat" />
+
+    <!-- TODO snake case -->
     <item
         android:id="@+id/profileFragment"
         android:icon="@drawable/ic_image_navigation_bar_profile"

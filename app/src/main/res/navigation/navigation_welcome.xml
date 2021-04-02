@@ -5,6 +5,7 @@
     android:id="@+id/my_nav"
     app:startDestination="@id/welcomeFragment">
 
+    <!-- TODO навигация не работает так как задумано -->
     <fragment
         android:id="@+id/welcomeFragment"
         android:name="com.example.nikolaiturev.finallyproject.presentation.welcome.WelcomeFragment"
