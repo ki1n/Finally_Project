@@ -15,5 +15,5 @@ val viewModelModule = module {
 
     viewModel { WelcomeViewModel(get()) }
 
-    viewModel { DiscoverViewModel(get()) }
+    viewModel { DiscoverViewModel() }
 }
