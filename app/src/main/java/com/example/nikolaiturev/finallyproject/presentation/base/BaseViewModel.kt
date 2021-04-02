@@ -12,6 +12,7 @@ abstract class BaseViewModel : ViewModel() {
 
     lateinit var navController: NavController
 
+    // TODO может быть приватным?
     protected val disposable = CompositeDisposable()
 
     val message: MutableLiveData<BaseMessage> = SingleLiveEvent()

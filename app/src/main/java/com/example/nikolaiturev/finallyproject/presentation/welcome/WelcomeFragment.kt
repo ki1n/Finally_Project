@@ -12,6 +12,7 @@ class WelcomeFragment : BaseFragment() {
     override val viewModel by viewModel<WelcomeViewModel>()
 
     override fun initView() {
+        // TODO что возвращает getCurrentUser?
         viewModel.getCurrentUser()
 
         button_welcome_login.setOnDebouncedClickListener {

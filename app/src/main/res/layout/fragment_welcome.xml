@@ -4,6 +4,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <!-- TODO:
+        android:layout_width="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+        и
+
+        android:layout_width="match_parent"
+
+        разница?
+     -->
     <ImageView
         android:id="@+id/image"
         android:layout_width="0dp"
@@ -26,6 +37,12 @@
         app:layout_constraintTop_toTopOf="@+id/image"
         app:srcCompat="@drawable/group" />
 
+    <!-- TODO:
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+        точно нужно?
+     -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraint_layout"
         android:layout_width="match_parent"
@@ -35,6 +52,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
+        <!-- TODO:
+            android:layout_marginTop="@dimen/dp_20"
+            android:layout_marginBottom="@dimen/dp_20"
+
+            заменить на
+
+            android:layout_marginHorizontal="@dimen/dp_20"
+         -->
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/button_welcome_login"
             style="@style/AppTheme.ButtonWhite"
@@ -49,6 +74,14 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+        <!-- TODO:
+            android:layout_marginTop="@dimen/dp_20"
+            android:layout_marginBottom="@dimen/dp_20"
+
+            заменить на
+
+            android:layout_marginHorizontal="@dimen/dp_20"
+         -->
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/button_welcome_register"
             style="@style/AppTheme.ButtonBlack"

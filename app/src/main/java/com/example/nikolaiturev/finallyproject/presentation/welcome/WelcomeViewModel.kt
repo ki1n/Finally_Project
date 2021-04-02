@@ -6,6 +6,7 @@ import com.google.firebase.auth.FirebaseAuth
 
 class WelcomeViewModel(private val auth: FirebaseAuth) : BaseViewModel() {
 
+    // TODO точно GET current user?
     fun getCurrentUser() {
         if (auth.currentUser != null) {
             navigateTo(R.id.action_welcomeFragment_to_discoverFragment)

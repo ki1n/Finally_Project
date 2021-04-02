@@ -4,6 +4,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <!-- TODO:
+        app:layout_constraintBottom_toTopOf="@+id/text_view_register"
+
+        точно нужно?
+     -->
     <ImageView
         android:id="@+id/image_view_register_back_welcome"
         android:layout_width="wrap_content"
@@ -17,6 +22,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <!-- TODO:
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginEnd="@dimen/dp_16"
+
+        заменить на
+
+        android:layout_marginVertical="@dimen/dp_16"
+     -->
     <TextView
         android:id="@+id/text_view_register"
         style="@style/Heading.Filled"
@@ -31,6 +44,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/image_view_register_back_welcome" />
 
+    <!-- TODO:
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginEnd="@dimen/dp_16"
+
+        заменить на
+
+        android:layout_marginVertical="@dimen/dp_16"
+     -->
     <EditText
         android:id="@+id/edit_text_register_email"
         style="@style/Edit.Filled"
@@ -45,6 +66,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text_view_register" />
 
+    <!-- TODO:
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginEnd="@dimen/dp_16"
+
+        заменить на
+
+        android:layout_marginVertical="@dimen/dp_16"
+     -->
     <EditText
         android:id="@+id/edit_text_register_password"
         style="@style/Edit.Filled"
@@ -59,6 +88,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edit_text_register_email" />
 
+    <!-- TODO:
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginEnd="@dimen/dp_16"
+
+        заменить на
+
+        android:layout_marginVertical="@dimen/dp_16"
+     -->
     <EditText
         android:id="@+id/edit_text_register_password_repeat"
         style="@style/Edit.Filled"
@@ -73,6 +110,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edit_text_register_password" />
 
+    <!-- TODO:
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginEnd="@dimen/dp_16"
+
+        заменить на
+
+        android:layout_marginVertical="@dimen/dp_16"
+     -->
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button_register"
         style="@style/AppTheme.ButtonBlack"
