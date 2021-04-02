@@ -14,7 +14,7 @@
         android:theme="@style/Theme.Launcher">
 
         <activity
-            android:name=".presentation.main.MainActivity"
+            android:name=".presentation.main.WelcomeActivity"
             android:windowSoftInputMode="adjustResize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

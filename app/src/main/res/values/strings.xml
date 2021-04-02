@@ -24,4 +24,12 @@
     <string name="login_hint_password">*********</string>
     <string name="login_successfully_logged_in">Успешно вошли!</string>
     <!--/LoginFragment-->
+
+    <!--BottomMenu-->
+    <string name="bottom_home">Home</string>
+    <string name="bottom_search">Search</string>
+    <string name="bottom_add">Add</string>
+    <string name="bottom_chat">Chat</string>
+    <string name="bottom_profile">Profile</string>
+    <!--/BottomMenu-->
 </resources>
