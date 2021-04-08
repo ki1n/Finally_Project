@@ -19,7 +19,8 @@ class FinallyProjectApp : Application() {
                     repositoryModule,
                     viewModelModule,
                     mapperModule,
-                    adapterModule
+                    adapterModule,
+                    databaseModule
                 )
             )
             this.androidContext(this@FinallyProjectApp)

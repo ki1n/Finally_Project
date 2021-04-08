@@ -1,6 +1,7 @@
 package com.example.nikolaiturev.finallyproject.di
 
-import com.example.nikolaiturev.finallyproject.presentation.discover.DiscoverViewModel
+import com.example.nikolaiturev.finallyproject.presentation.action_choice_dialog.ActionChoicePhotoViewModel
+import com.example.nikolaiturev.finallyproject.presentation.gallery_photo.PhotoGalleryViewModel
 import com.example.nikolaiturev.finallyproject.presentation.log_in.LoginViewModel
 import com.example.nikolaiturev.finallyproject.presentation.register.RegisterViewModel
 import com.example.nikolaiturev.finallyproject.presentation.welcome.WelcomeViewModel
@@ -15,5 +16,7 @@ val viewModelModule = module {
 
     viewModel { WelcomeViewModel(get()) }
 
-    viewModel { DiscoverViewModel() }
+    viewModel { PhotoGalleryViewModel(get()) }
+
+    viewModel { ActionChoicePhotoViewModel(get()) }
 }

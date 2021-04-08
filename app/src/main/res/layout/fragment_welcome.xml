@@ -5,7 +5,7 @@
     android:layout_height="match_parent">
 
     <ImageView
-        android:id="@+id/image"
+        android:id="@+id/image_splash"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:adjustViewBounds="true"
@@ -17,13 +17,13 @@
         app:srcCompat="@drawable/splash" />
 
     <ImageView
-        android:id="@+id/image_photo"
+        android:id="@+id/image_splash_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="@+id/image"
+        app:layout_constraintBottom_toBottomOf="@+id/image_splash"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/image"
+        app:layout_constraintTop_toTopOf="@+id/image_splash"
         app:srcCompat="@drawable/group" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -41,8 +41,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/dp_16"
-            android:layout_marginTop="@dimen/dp_20"
-            android:layout_marginBottom="@dimen/dp_20"
+            android:layout_marginVertical="@dimen/dp_20"
             android:text="@string/welcome_log_in"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/button_welcome_register"
@@ -55,9 +54,8 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/dp_8"
-            android:layout_marginTop="@dimen/dp_20"
+            android:layout_marginVertical="@dimen/dp_20"
             android:layout_marginEnd="@dimen/dp_16"
-            android:layout_marginBottom="@dimen/dp_20"
             android:text="@string/welcome_register"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

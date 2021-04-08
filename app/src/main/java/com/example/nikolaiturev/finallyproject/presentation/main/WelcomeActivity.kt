@@ -7,6 +7,5 @@ class WelcomeActivity : BaseActivity() {
     override var layoutId: Int = R.layout.activity_welcome
 
     override fun iniView() {
-        // ignore
     }
 }
