@@ -1,36 +1,38 @@
 package com.example.nikolaiturev.finallyproject.presentation.map
 
-import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import androidx.fragment.app.Fragment
+import android.Manifest
+import androidx.activity.result.contract.ActivityResultContracts
 import com.example.nikolaiturev.finallyproject.R
-import com.google.android.gms.maps.CameraUpdateFactory
+import com.example.nikolaiturev.finallyproject.presentation.base.BaseFragment
+import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
-import com.google.android.gms.maps.model.LatLng
-import com.google.android.gms.maps.model.MarkerOptions
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
-class MapFragment : Fragment() {
+class MapFragment : BaseFragment(), OnMapReadyCallback {
+    override var layoutId: Int = R.layout.fragment_map
 
-    private val callback = OnMapReadyCallback { googleMap ->
-        val sydney = LatLng(-34.0, 151.0)
-        googleMap.addMarker(MarkerOptions().position(sydney).title("Marker in Sydney"))
-        googleMap.moveCamera(CameraUpdateFactory.newLatLng(sydney))
-    }
+    override val viewModel by viewModel<MapViewModel>()
 
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.fragment_maps, container, false)
-    }
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
+    override fun initView() {
         val mapFragment = childFragmentManager.findFragmentById(R.id.map) as SupportMapFragment?
-        mapFragment?.getMapAsync(callback)
+        mapFragment?.getMapAsync(this)
+    }
+
+    override fun onMapReady(googleMap: GoogleMap?) {
+        viewModel.map = googleMap ?: return
+        requestLocationPermission()
+    }
+
+    private val readLocationPermissionLauncher = registerForActivityResult(
+        ActivityResultContracts.RequestPermission()
+    ) { isAcceptPermission ->
+        if (isAcceptPermission) {
+            viewModel.geo()
+        }
+    }
+
+    private fun requestLocationPermission() {
+        readLocationPermissionLauncher.launch(Manifest.permission.ACCESS_FINE_LOCATION)
     }
 }

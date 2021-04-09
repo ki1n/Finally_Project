@@ -12,3 +12,5 @@ fun getURIFile(context: Context): Uri {
 
     return FileProvider.getUriForFile(context, Variables.FILE_PROVIDER_AUTHORITY, file)
 }
+
+
