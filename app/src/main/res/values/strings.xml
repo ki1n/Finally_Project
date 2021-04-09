@@ -28,8 +28,23 @@
     <!--BottomMenu-->
     <string name="bottom_home">Home</string>
     <string name="bottom_search">Search</string>
+    <string name="bottom_map">Map</string>
     <string name="bottom_add">Add</string>
     <string name="bottom_chat">Chat</string>
     <string name="bottom_profile">Profile</string>
+    <string name="bottom_gallery">Gallery</string>
     <!--/BottomMenu-->
+
+    <!--PhotoGalleryFragment-->
+    <string name="photo_gallery_document_editing">Редактирование документа</string>
+    <string name="photo_gallery_rename">Переименовать</string>
+    <string name="photo_gallery_add_text">Добавить</string>
+    <!--/PhotoGalleryFragment-->
+
+    <!--ActionChoicePhotoDialog-->
+    <string name="photo_dialog_choose_photo">Выбрать фото</string>
+    <string name="photo_dialog_take_photo">Снять фото</string>
+    <string name="photo_dialog_cancellation">Отмена</string>
+    <string name="photo_gallery_add_button">Добавить</string>
+    <!--/ActionChoicePhotoDialog-->
 </resources>

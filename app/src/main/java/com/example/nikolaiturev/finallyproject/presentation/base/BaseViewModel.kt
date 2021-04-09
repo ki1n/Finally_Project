@@ -1,5 +1,6 @@
 package com.example.nikolaiturev.finallyproject.presentation.base
 
+import android.net.Uri
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.navigation.NavController
@@ -11,6 +12,7 @@ import io.reactivex.disposables.Disposable
 abstract class BaseViewModel : ViewModel() {
 
     lateinit var navController: NavController
+    lateinit var cameraPhoto: Uri
 
     protected val disposable = CompositeDisposable()
 
@@ -21,15 +23,15 @@ abstract class BaseViewModel : ViewModel() {
         disposable.add(call.invoke())
     }
 
-    protected fun navigateTo(destinationId: Int){
+    protected fun navigateTo(destinationId: Int) {
         navController.navigate(destinationId)
     }
 
-    protected fun navigateTo(destination: NavDirections){
+    protected fun navigateTo(destination: NavDirections) {
         navController.navigate(destination)
     }
 
-    protected fun navigateBack(){
+    protected fun navigateBack() {
         navController.navigateUp()
     }
 
