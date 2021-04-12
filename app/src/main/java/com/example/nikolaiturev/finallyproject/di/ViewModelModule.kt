@@ -2,6 +2,7 @@ package com.example.nikolaiturev.finallyproject.di
 
 import com.example.nikolaiturev.finallyproject.presentation.action_choice_dialog.ActionChoicePhotoViewModel
 import com.example.nikolaiturev.finallyproject.presentation.gallery_photo.PhotoGalleryViewModel
+import com.example.nikolaiturev.finallyproject.presentation.gallery_photo_details.GalleryPhotoDetailsViewModel
 import com.example.nikolaiturev.finallyproject.presentation.log_in.LoginViewModel
 import com.example.nikolaiturev.finallyproject.presentation.map.MapViewModel
 import com.example.nikolaiturev.finallyproject.presentation.register.RegisterViewModel
@@ -22,4 +23,6 @@ val viewModelModule = module {
     viewModel { ActionChoicePhotoViewModel(get()) }
 
     viewModel { MapViewModel() }
+
+    viewModel { GalleryPhotoDetailsViewModel(get()) }
 }

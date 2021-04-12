@@ -13,10 +13,17 @@
         <action
             android:id="@+id/action_photoGalleryFragment2_to_actionChoicePhotoDialog"
             app:destination="@id/actionChoicePhotoDialog" />
+        <action
+            android:id="@+id/action_photoGalleryFragment2_to_galleryPhotoDetailsFragment"
+            app:destination="@id/galleryPhotoDetailsFragment" />
     </fragment>
     <dialog
         android:label="actionChoicePhotoDialog"
         android:id="@+id/actionChoicePhotoDialog"
         android:name="com.example.nikolaiturev.finallyproject.presentation.action_choice_dialog.ActionChoicePhotoDialog"
         tools:layout="@layout/fragment_action_choice_dialog" />
+    <fragment
+        android:id="@+id/galleryPhotoDetailsFragment"
+        android:name="com.example.nikolaiturev.finallyproject.presentation.gallery_photo_details.GalleryPhotoDetailsFragment"
+        tools:layout="@layout/fragment_gallery_photo_details" />
 </navigation>

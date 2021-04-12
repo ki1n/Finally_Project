@@ -22,6 +22,10 @@ class PhotoGalleryViewModel(private val photoRepository: PhotoRepository) : Base
         navController.navigate(R.id.action_photoGalleryFragment2_to_actionChoicePhotoDialog)
     }
 
+    fun navigationToGalleryPhotoDetailsFragment(){
+        navController.navigate(R.id.action_photoGalleryFragment2_to_galleryPhotoDetailsFragment)
+    }
+
     private fun getPhotos() {
         photoRepository.getPhotos()
             .subscribeOn(Schedulers.io())

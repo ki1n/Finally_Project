@@ -33,5 +33,9 @@ class PhotoGalleryFragment : BaseFragment() {
         photoAdapter.onAddClickListener = {
             viewModel.navigateToActionChoiceDialog()
         }
+
+        photoAdapter.onClickListener = {
+            viewModel.navigationToGalleryPhotoDetailsFragment()
+        }
     }
 }

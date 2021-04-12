@@ -13,6 +13,7 @@ class PhotoAdapter : ListAdapter<Photo, RecyclerView.ViewHolder>(PhotoDiffCallba
 
     lateinit var onDeleteClickListener: ((Photo) -> Unit)
     lateinit var onAddClickListener: ((Unit) -> Unit)
+    lateinit var onClickListener: ((Unit) -> Unit)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         return when (viewType) {
@@ -36,6 +37,9 @@ class PhotoAdapter : ListAdapter<Photo, RecyclerView.ViewHolder>(PhotoDiffCallba
                     imagePhoto.loadImage(currentPhoto.image)
                     deletePhoto.setOnDebouncedClickListener {
                         onDeleteClickListener.invoke(currentPhoto)
+                    }
+                    imagePhoto.setOnDebouncedClickListener {
+                        onClickListener.invoke(Unit)
                     }
                 }
             }
