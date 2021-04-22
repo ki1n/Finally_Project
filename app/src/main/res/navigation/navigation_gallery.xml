@@ -25,5 +25,10 @@
     <fragment
         android:id="@+id/galleryPhotoDetailsFragment"
         android:name="com.example.nikolaiturev.finallyproject.presentation.gallery_photo_details.GalleryPhotoDetailsFragment"
-        tools:layout="@layout/fragment_gallery_photo_details" />
+        tools:layout="@layout/fragment_gallery_photo_details" >
+        <argument
+            android:name="positionImage"
+            app:argType="integer"
+            android:defaultValue="-1" />
+    </fragment>
 </navigation>

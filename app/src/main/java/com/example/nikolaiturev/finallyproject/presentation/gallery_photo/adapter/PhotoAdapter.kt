@@ -14,11 +14,12 @@ class PhotoAdapter : ListAdapter<Photo, RecyclerView.ViewHolder>(PhotoDiffCallba
     lateinit var onDeleteClickListener: ((Photo) -> Unit)
     lateinit var onAddClickListener: ((Unit) -> Unit)
     lateinit var onClickListener: ((Unit) -> Unit)
+    lateinit var onBindListener: ((Int) -> Unit)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         return when (viewType) {
             R.layout.item_photo -> {
-                PhotoAdapterViewHolder(parent.inflate(R.layout.item_photo))
+                PhotoViewHolder(parent.inflate(R.layout.item_photo))
             }
             R.layout.item_button_photo_add -> {
                 PlaceholderViewHolder(parent.inflate(R.layout.item_button_photo_add))
@@ -31,16 +32,19 @@ class PhotoAdapter : ListAdapter<Photo, RecyclerView.ViewHolder>(PhotoDiffCallba
         when (getItemViewType(position)) {
             R.layout.item_photo -> {
                 val currentPhoto = currentList[position]
-                (holder as PhotoAdapterViewHolder)
+                (holder as PhotoViewHolder)
                 with(holder) {
                     bind(currentPhoto)
                     imagePhoto.loadImage(currentPhoto.image)
+                    imagePhoto.setOnDebouncedClickListener {
+                        onBindListener.invoke(get())
+                    }
                     deletePhoto.setOnDebouncedClickListener {
                         onDeleteClickListener.invoke(currentPhoto)
                     }
-                    imagePhoto.setOnDebouncedClickListener {
-                        onClickListener.invoke(Unit)
-                    }
+//                    imagePhoto.setOnDebouncedClickListener {
+//                        onClickListener.invoke(Unit)
+//                    }
                 }
             }
             R.layout.item_button_photo_add -> {

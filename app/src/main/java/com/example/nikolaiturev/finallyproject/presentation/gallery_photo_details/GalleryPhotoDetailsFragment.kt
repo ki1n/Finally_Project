@@ -22,8 +22,7 @@ class GalleryPhotoDetailsFragment : BaseFragment() {
 
         viewModel.listImageLiveData.observe(viewLifecycleOwner, { list ->
             photoDetailsAdapter.submitList(list)
-        //    view_pager.setCurrentItem( view_pager.childCount *  Variables.A_BIG_NUMBER / 2, false)
-         //   photoDetailsAdapter.notifyDataSetChanged()
+          //   view_pager.setCurrentItem( position , false)
         })
     }
 

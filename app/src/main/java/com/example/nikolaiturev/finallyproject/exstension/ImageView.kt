@@ -17,16 +17,3 @@ fun ImageView.loadImage(
             }
         }
         .into(this)
-
-//fun SubsamplingScaleImageView.loadImage(
-//    url: String?,
-//    customize: (RequestBuilder<Drawable>.() -> RequestBuilder<Drawable>)? = null
-//) =
-//    with(context)
-//        .load(url)
-//        .also { glideRequest ->
-//            if (customize != null) {
-//                glideRequest.customize()
-//            }
-//        }
-//        .into(this)

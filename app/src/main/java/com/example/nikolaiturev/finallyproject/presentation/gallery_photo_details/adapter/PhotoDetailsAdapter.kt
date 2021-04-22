@@ -18,9 +18,15 @@ class PhotoDetailsAdapter : ListAdapter<Image, PhotoDetailsViewHolder>(ImageDiff
 
     override fun onBindViewHolder(holder: PhotoDetailsViewHolder, position: Int) {
         val currentImage = currentList[position]
-        holder.imagePhotoDetails.loadImage(currentImage.image)
-        holder.imagePhotoDetails.setOnDebouncedClickListener {
-            onClickListener.invoke(holder.get())
+        with(holder) {
+            textDetails.text = textDetails.resources.getString(
+                R.string.gallery_photo_details_image,
+                position + 1, currentList.size
+            )
+            imagePhotoDetails.loadImage(currentImage.image)
+            imagePhotoDetails.setOnDebouncedClickListener {
+                onClickListener.invoke(holder.get())
+            }
         }
     }
 }

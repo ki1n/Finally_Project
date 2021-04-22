@@ -47,4 +47,8 @@
     <string name="photo_dialog_cancellation">Отмена</string>
     <string name="photo_gallery_add_button">Добавить</string>
     <!--/ActionChoicePhotoDialog-->
+
+    <!--GalleryPhotoDetailsFragment-->
+    <string name="gallery_photo_details_image">%1$d из %2$d</string>
+    <!--/GalleryPhotoDetailsFragment-->
 </resources>
